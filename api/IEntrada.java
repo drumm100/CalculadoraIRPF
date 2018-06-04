@@ -4,7 +4,6 @@ public class Entrada {
     private double valor;
     
 	public Entrada(int id, int mes, double valor) {
-		super();
 		this.id = id;
 		this.mes = mes;
 		this.valor = valor;

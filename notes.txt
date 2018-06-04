@@ -1,0 +1,7 @@
+Contribuinte -> rendimento:
+			-> total recebdio do ano
+			-> quanto recolhido na fonte (IRFF)
+			-> quanto foi pago de INSS
+			=> tributável = total recebdio - pago ao INSS
+
+BC: totais tributaveis - (bonus + impostos)
