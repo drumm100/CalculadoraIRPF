@@ -11,7 +11,12 @@ public class Cidadao implements Contribuinte
 
 
 
-    public Cidadao(){}
+    public Cidadao(int id, int idade, String nome)
+    {
+        this.id = id;
+        this.idade = idade;
+        this.nome = nome;
+    }
 
 
     @Override
