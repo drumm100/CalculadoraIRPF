@@ -22,19 +22,21 @@ public class Cidadao implements Contribuinte
     @Override
     public void cadastraDependente(Pessoa dependente)
     {
-
+        dependentes.add(dependente);
     }
 
     @Override
     public void cadastraDespesa(Despesa despesa)
     {
-
+        despesas.add(despesa);
     }
 
     @Override
-    public void cadastraRendimento(Rendimento rendimento) {
-
+    public void cadastraRendimento(Rendimento rendimento)
+    {
+        rendimentos.add(rendimento);
     }
+
 
     @Override
     public ArrayList<Pessoa> getDependentes() {
