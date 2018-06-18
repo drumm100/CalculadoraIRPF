@@ -1,6 +1,6 @@
 import java.util.Set;
 
-public interface Pessoa {
+public interface IPessoa {
     int getId();
     String getNome();
     int getIdade();

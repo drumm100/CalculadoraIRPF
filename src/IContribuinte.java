@@ -7,12 +7,12 @@ import java.util.Set;
 * */
 
 
-public interface Contribuinte extends Pessoa {
+public interface IContribuinte extends IPessoa {
 
     //@ requires dependente != null;
     //@ requires !(getDependentes().contains(dependente));
     //@ ensures getDependentes().contains(dependentes);
-    void cadastraDependente(Pessoa dependente);
+    void cadastraDependente(IPessoa dependente);
 
     //@ requires despesa != null;
     //@ requires !(getDespesas().contains(dependente));
@@ -22,11 +22,11 @@ public interface Contribuinte extends Pessoa {
     //@ requires rendimento != null;
     //@ requires !(getRendimentos().contains(rendimento));
     //@ ensures getRendimentos().contains(rendimento);
-    void cadastraRendimento(Rendimento rendimento);
+    void cadastraRendimento(IRendimento rendimento);
 
-    ArrayList<Pessoa> getDependentes();
+    ArrayList<IPessoa> getDependentes();
     ArrayList<Despesa> getDespesas();
-    ArrayList<Rendimento> getRendimentos();
+    ArrayList<IRendimento> getRendimentos();
 
     //@ requires !(getRendimentos().isEmpty());
     //@ ensures \result == (\sum int i; 0<= i && i < getRendimentos().size(); getRendimentos().get(i));

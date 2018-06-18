@@ -1,5 +1,5 @@
 
-public interface RendimentoAssalariado extends Rendimento{
+public interface IRendimentoAssalariado extends IRendimento{
     public double getTotalIrRecolhidoNaFonte();
     public double getTotalINSSPago();
 }
