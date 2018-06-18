@@ -11,7 +11,9 @@ public class Cidadao implements IContribuinte
 
 
 
-    public Cidadao(int id, int idade, String nome){
+
+    public Cidadao(int id, int idade, String nome)
+    {
         this.id = id;
         this.idade = idade;
         this.nome = nome;
@@ -72,14 +74,20 @@ public class Cidadao implements IContribuinte
         int total = 0;
         for (IRendimento r: rendimentos)
         {
-
+            total += r.getTotalRecebidoAno();
         }
-        return 0;
+        return total;
     }
 
     @Override
-    public double getTotalDespesas() {
-        return 0;
+    public double getTotalDespesas()
+    {
+        int total = 0;
+        for (Despesa d: despesas)
+        {
+            total += d.getValor();
+        }
+        return total;
     }
 
     @Override
