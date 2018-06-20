@@ -1,5 +1,5 @@
 
 public interface IRendimentoAssalariado extends IRendimento{
-    public double getTotalIrRecolhidoNaFonte();
+    public double getTotalRecolhidoNaFonte();
     public double getTotalINSSPago();
 }

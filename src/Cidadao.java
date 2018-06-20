@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
-public class Cidadao implements IContribuinte
-{
+
+public class Cidadao implements IContribuinte {
     private int idade;
     private int id;
     private String nome;
@@ -41,16 +41,10 @@ public class Cidadao implements IContribuinte
     }
 
     @Override
-    public void cadastraDespesa(Despesa despesa)
-    {
-        despesas.add(despesa);
-    }
+    public void cadastraDespesa(Despesa despesa) {despesas.add(despesa);}
 
     @Override
-    public void cadastraRendimento(IRendimento rendimento)
-    {
-        rendimentos.add(rendimento);
-    }
+    public void cadastraRendimento(IRendimento rendimento) {rendimentos.add(rendimento);}
 
 
     @Override
@@ -64,8 +58,36 @@ public class Cidadao implements IContribuinte
     }
 
     @Override
-    public ArrayList<IRendimento> getRendimentos() {
-        return this.rendimentos;
+    public ArrayList<IRendimento> getRendimentos(){return this.rendimentos;}
+
+    @Override
+    public ArrayList<IRendimentoAssalariado> getRendimentosAssalariado()
+    {
+        ArrayList<IRendimentoAssalariado> aux = new ArrayList<>();
+
+        for (IRendimento r: rendimentos)
+        {
+            if (r instanceof IRendimentoAssalariado)
+            {
+                aux.add((IRendimentoAssalariado) r);
+            }
+        }
+        return aux;
+    }
+
+    @Override
+    public ArrayList<IRendimentoNaoAssalariado> getRendimentoNaoAssalariado()
+    {
+        ArrayList<IRendimentoNaoAssalariado> aux = new ArrayList<>();
+
+        for (IRendimento r: rendimentos)
+        {
+            if (r instanceof IRendimentoNaoAssalariado)
+            {
+                aux.add((IRendimentoNaoAssalariado) r);
+            }
+        }
+        return aux;
     }
 
     @Override
@@ -91,18 +113,84 @@ public class Cidadao implements IContribuinte
     }
 
     @Override
-    public double getBaseDeCalculo() {
-        return 0;
+    public double getBaseDeCalculoSimplificado()
+    {
+        return getTotalTributavel() - getTotalRecolhidoFonte();
     }
 
     @Override
-    public double getImpostoPagarSimplificado() {
-        return 0;
+    public double getBaseDeCalculoCompleto()
+    {
+        return getBaseDeCalculoSimplificado() - getTotalBonus();
+    }
+
+    //Métodos adicionais:
+    private double getTotalTributavel()
+    {
+        int total = 0;
+        for (IRendimento r: rendimentos)
+        {
+            total += r.getTotalTributavel();
+        }
+        return total;
+    }
+    private double getTotalRecolhidoFonte()
+    {
+        double total = 0;
+        for (IRendimentoAssalariado r: getRendimentosAssalariado())
+        {
+           total = r.getTotalRecolhidoNaFonte();
+        }
+        return total;
+    }
+    private double getTotalBonus()
+    {
+        double total = 0;
+
+        for (Despesa d: despesas)
+        {
+            if(d.getIdPessoa() == this.id) {
+                if (d.getTipoDespesa() >= 0) {
+                    total = (d.getValor() > 20000) ? 10000 : d.getValor() * 0.5;
+                }
+            }else{
+                if(d.getTipoDespesa() == 1){
+                    total += (d.getValor() >= 5000) ? 5000 : d.getValor();
+                }
+                if(d.getTipoDespesa() == 0){
+                    total += (d.getValor() >= 6000) ? 3000 : d.getValor()*0.5;
+                }
+            }
+        }
+        return total;
+    }
+
+/**
+ * a.	Base de cálculo até $ 15000,00 no ano é considerada isenta.
+ * b.	 A faixa entre $ 15001,00 até 35000,00 deve pagar 15% de imposto.
+ * c.	Os valores que excederem 35000,00 são tributados em 30%.
+ * */
+
+    @Override
+    public double getImpostoPagarSimplificado()
+    {
+        if (getBaseDeCalculoSimplificado() <= 15000.00)
+            return 0;
+        if (getBaseDeCalculoSimplificado() > 15000.00 && getBaseDeCalculoSimplificado() <= 35000.00)
+            return getBaseDeCalculoSimplificado()*0.15;
+        else
+            return getBaseDeCalculoSimplificado()*0.3;
     }
 
     @Override
-    public double getImpostoPagarCompleto() {
-        return 0;
+    public double getImpostoPagarCompleto()
+    {
+        if (getBaseDeCalculoCompleto() <= 15000.00)
+            return 0;
+        if (getBaseDeCalculoCompleto() > 15000.00 && getBaseDeCalculoCompleto() <= 35000.00)
+            return getBaseDeCalculoCompleto()*0.15;
+        else
+            return getBaseDeCalculoCompleto()*0.3;
     }
 
 }

@@ -18,7 +18,7 @@ public class RendimentoAssalariado implements IRendimentoAssalariado
     }
 
     @Override
-    public double getTotalIrRecolhidoNaFonte()
+    public double getTotalRecolhidoNaFonte()
     {
         return this.recolhidoNaFonte;
     }
@@ -50,6 +50,6 @@ public class RendimentoAssalariado implements IRendimentoAssalariado
     @Override
     public double getTotalTributavel()
     {
-        return this.totalRecebidoAno - this.totalInssPago;
+        return this.totalRecebidoAno - this.recolhidoNaFonte - this.totalInssPago;
     }
 }
