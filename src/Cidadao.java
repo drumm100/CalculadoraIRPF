@@ -17,6 +17,9 @@ public class Cidadao implements IContribuinte {
         this.id = id;
         this.idade = idade;
         this.nome = nome;
+        despesas = new ArrayList<>();
+        dependentes = new ArrayList<>();
+        rendimentos = new ArrayList<>();
     }
 
     @Override
@@ -139,7 +142,7 @@ public class Cidadao implements IContribuinte {
         double total = 0;
         for (IRendimentoAssalariado r: getRendimentosAssalariado())
         {
-           total = r.getTotalRecolhidoNaFonte();
+           total += r.getTotalRecolhidoNaFonte();
         }
         return total;
     }
