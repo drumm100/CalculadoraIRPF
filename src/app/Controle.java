@@ -16,29 +16,21 @@ public class Controle {
     @FXML
     private TextField nomeDoSujeito;
 
-    private int id = 0;
 
     Persistencia p = Persistencia.getInstance();
+    int id = 0;
 
-    public void BuscaContribuinte(){
+    public void BuscaContribuinte()
+    {
         System.out.println("O meu nome é: " + nomeDoSujeito.getText());
-        System.out.println(p.retornaLista().toString());
 
         int idade = Integer.parseInt(idadeDoSujeito.getText());
         String nome = nomeDoSujeito.getText();
 
-        if (p.buscaCidadao(nome, idade) == null){
-            System.out.println("O cidadao nao existe");
-
+        if (p.buscaCidadao(nome, idade) == null )
+        {
             p.adicionaCidadao(new Cidadao(id++, idade, nome));
-
-            if(p.buscaCidadao(nome, idade) != null)
-                System.out.println(p.buscaCidadao(nome, idade).getNome());
-
-        }else{
-            System.out.println("Cidadao: " + p.buscaCidadao(nome, idade).getNome() + " existe");
         }
-
+        System.out.println(p.retornaLista().toString());
     }
-
 }

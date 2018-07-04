@@ -13,6 +13,7 @@ public class App extends Application{
         primaryStage.setTitle("Cidade Impostôpolis");
         primaryStage.setScene(new Scene(root, 815, 700));
         primaryStage.show();
+
     }
 
 

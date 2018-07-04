@@ -7,6 +7,7 @@ public class Persistencia {
     public static Persistencia instance = null;
 
     public static ArrayList<Cidadao> ListaCidadoes;
+    private static int id = 0;
 
     private Persistencia(){
         ListaCidadoes = new ArrayList<Cidadao>();
@@ -23,12 +24,13 @@ public class Persistencia {
 
     public static Cidadao buscaCidadao(String cidadao, int idade){
         for (Cidadao c: ListaCidadoes) {
-            if (c.getNome() == cidadao && c.getIdade() == idade) return c;
+            if (c.getNome().equals(cidadao) && c.getIdade() == idade) return c;
         }
         return null;
     }
 
-    public static void adicionaCidadao(Cidadao c){
+    public static void adicionaCidadao(Cidadao c)
+    {
         ListaCidadoes.add(c);
     }
 
