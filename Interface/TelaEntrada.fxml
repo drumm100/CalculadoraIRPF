@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #20120F;" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="165.0" layoutY="52.0" style="&#10;" text="Impostrópolis" textAlignment="CENTER" textFill="RED" wrapText="false">
+          <font>
+            <Font name="Verdana" size="45.0" />
+          </font>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+        </Label>
+            <Button layoutX="275.0" layoutY="160.0" mnemonicParsing="false" style="-fx-background-color: #9C2B27;" text="Adicionar" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </Button>
+            <Button layoutX="274.0" layoutY="214.0" mnemonicParsing="false" style="-fx-background-color: #9C2B27;" text="Consultar" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Button layoutX="285.0" layoutY="267.0" mnemonicParsing="false" style="-fx-background-color: #9C2B27;" text="Sair" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

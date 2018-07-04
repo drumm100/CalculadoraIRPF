@@ -128,57 +128,8 @@ public class TestCidadao
         assertThat(Neymar.getImpostoPagarCompleto(), is(IBC));
 
 
-
-
-
-
-
-        //Fazer com theory
-
     }
 
 
-    /**
-
-    @Test
-    public void testGetImpostoSimplificado()
-    {
-        rna1.cadastraValorRecebido(nike);
-        Neymar.cadastraRendimento(rna1);     //Neymar recebe bonus por gols
-        Neymar.cadastraRendimento(ra1);      //Salário
-        Neymar.cadastraDespesa(d3);          //Despesa da Bruna
-
-
-        //Total Tributável - IRRF
-        //TT salario : 30000000 - 10000000 - 937 = 19999063
-        //TT = soma rendimentos = 19999063 + 10000 = 20009063
-        //IRRF = 10000000
-        // TT - IRRF = 10009063 * 0.3 = 3002718.9
-        assertEquals(3002718.9,Neymar.getImpostoPagarSimplificado(),0.1);
-
-    }
-
-    @Test
-    public void testGetDespesas()
-    {
-        Neymar.cadastraDespesa(d1);
-        assertEquals(Neymar.getDespesas().size(), 1);
-    }
-
-    @Test
-    public void testGetDependente()
-    {
-        Neymar.cadastraDependente(Bruna);
-        assertEquals(Neymar.getDependentes().size(), 1);
-    }
-
-    @Test
-    public void testGetRendimento()
-    {
-        Neymar.cadastraRendimento(ra1);
-        assertEquals(Neymar.getRendimentos().size(), 1);
-    }
-
-*/
 
 }
