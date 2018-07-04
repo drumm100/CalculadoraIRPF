@@ -19,7 +19,7 @@
                   <Glow level="1.0" />
                </effect>
         </Label>
-            <Button layoutX="275.0" layoutY="160.0" mnemonicParsing="false" style="-fx-background-color: #9C2B27;" text="Adicionar" textFill="WHITE">
+            <Button layoutX="251.0" layoutY="158.0" mnemonicParsing="false" style="-fx-background-color: #9C2B27;" text="Adicionar Pessoa" textFill="WHITE">
                <font>
                   <Font size="25.0" />
                </font>
@@ -27,7 +27,7 @@
                   <Glow level="1.0" />
                </effect>
             </Button>
-            <Button layoutX="274.0" layoutY="214.0" mnemonicParsing="false" style="-fx-background-color: #9C2B27;" text="Consultar" textFill="WHITE">
+            <Button layoutX="274.0" layoutY="262.0" mnemonicParsing="false" style="-fx-background-color: #9C2B27;" text="Consultar" textFill="WHITE">
                <font>
                   <Font size="25.0" />
                </font>
@@ -35,12 +35,20 @@
                   <Glow />
                </effect>
             </Button>
-            <Button layoutX="285.0" layoutY="267.0" mnemonicParsing="false" style="-fx-background-color: #9C2B27;" text="Sair" textFill="WHITE">
+            <Button layoutX="284.0" layoutY="310.0" mnemonicParsing="false" style="-fx-background-color: #9C2B27;" text="Sair" textFill="WHITE">
                <font>
                   <Font size="25.0" />
                </font>
                <effect>
                   <Glow />
+               </effect>
+            </Button>
+            <Button layoutX="254.0" layoutY="211.0" mnemonicParsing="false" style="-fx-background-color: #9C2B27;" text="Adicionar Dados" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0" />
                </effect>
             </Button>
       </children>
