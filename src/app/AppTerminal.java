@@ -56,7 +56,8 @@ public class AppTerminal {
                     case "2":
                         boolean control_2 = true;
                         while (control_2) {
-                            System.out.println("Menû");
+                            System.out.println("Menu" +
+                                    "");
                             System.out.println("[1] Cadastrar Despesa");
                             System.out.println("[2] Cadastra Reindimento");
                             System.out.println("[3] Cadastra Dependente");
