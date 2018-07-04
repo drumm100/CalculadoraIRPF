@@ -16,6 +16,18 @@ public class Controle {
     @FXML
     private TextField nomeDoSujeito;
 
+    //Singleton
+    public static Controle instance = null;
+
+    public static Controle getInstance(){
+        if (instance == null){
+            instance = new Controle();
+            return instance;
+        }else {
+            return instance;
+        }
+    }
+
 
     Persistencia p = Persistencia.getInstance();
     int id = 0;
