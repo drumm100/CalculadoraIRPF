@@ -1,3 +1,4 @@
+package app;
 
 public interface IRendimento {
     int getId();

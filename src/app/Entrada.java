@@ -1,3 +1,5 @@
+package app;
+
 public class Entrada {
     private int id;
     private int mes;
@@ -23,6 +25,6 @@ public class Entrada {
 
 	@Override
 	public String toString() {
-		return "Entrada [id=" + id + ", mes=" + mes + ", valor=" + valor + "]";
+		return "app.Entrada [id=" + id + ", mes=" + mes + ", valor=" + valor + "]";
 	}
 }

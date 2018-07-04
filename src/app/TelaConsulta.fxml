@@ -15,7 +15,7 @@
          <children>
             <AnchorPane layoutX="14.0" layoutY="26.0" prefHeight="404.0" prefWidth="200.0" style="-fx-background-color: #FF8A8A;">
                <children>
-                  <Text layoutX="46.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastra Despesa">
+                  <Text layoutX="46.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastra app.Despesa">
                      <effect>
                         <Glow />
                      </effect>
@@ -29,7 +29,7 @@
                      </effect>
                   </Button>
                   <TextField layoutX="29.0" layoutY="68.0" text="ID Pessoa" />
-                  <TextField layoutX="29.0" layoutY="111.0" text="Tipo Despesa" />
+                  <TextField layoutX="29.0" layoutY="111.0" text="Tipo app.Despesa" />
                   <TextField layoutX="29.0" layoutY="155.0" text="Mês" />
                   <TextField layoutX="29.0" layoutY="202.0" text="Valor" />
                </children>

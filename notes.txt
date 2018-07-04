@@ -10,21 +10,21 @@ BC: totais tributaveis - (bonus + impostos)
  //@ requires dependente != null;
     //@ requires !(getDependentes().contains(dependente));
     //@ ensures getDependentes().contains(dependentes);
-    void cadastraDependente(IPessoa dependente);
+    void cadastraDependente(app.IPessoa dependente);
 
     //@ requires despesa != null;
     //@ requires !(getDespesas().contains(dependente));
     //@ ensures getDespesas().contains(despesas);
-    void cadastraDespesa(Despesa despesa);
+    void cadastraDespesa(app.Despesa despesa);
 
     //@ requires rendimento != null;
     //@ requires !(getRendimentos().contains(rendimento));
     //@ ensures getRendimentos().contains(rendimento);
-    void cadastraRendimento(IRendimento rendimento);
+    void cadastraRendimento(app.IRendimento rendimento);
 
-    ArrayList<IPessoa> getDependentes();
-    ArrayList<Despesa> getDespesas();
-    ArrayList<IRendimento> getRendimentos();
+    ArrayList<app.IPessoa> getDependentes();
+    ArrayList<app.Despesa> getDespesas();
+    ArrayList<app.IRendimento> getRendimentos();
 
     //@ requires !(getRendimentos().isEmpty());
     //@ ensures \result == (\sum int i; 0<= i && i < getRendimentos().size(); getRendimentos().get(i));

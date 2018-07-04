@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controle">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #E75A5A;" VBox.vgrow="ALWAYS">
+         <children>
+            <TextField fx:id="nomeDoSujeito" layoutX="246.0" layoutY="131.0" text="Digite o seu nome">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Button fx:id="btnEntrar" layoutX="271.0" layoutY="217.0" mnemonicParsing="false" onMouseClicked="#BuscaContribuinte" prefHeight="50.0" prefWidth="96.0" style="-fx-background-color: #5C5555;" text="Entrar" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Text fill="WHITE" layoutX="130.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quem é você, queridão?" wrappingWidth="380.91015625">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <TextField fx:id="idadeDoSujeito" layoutX="246.0" layoutY="166.0" text="Digite a sua idade">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

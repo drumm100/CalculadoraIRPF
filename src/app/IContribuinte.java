@@ -1,3 +1,5 @@
+package app;
+
 import java.util.ArrayList;
 
 public interface IContribuinte extends IPessoa {

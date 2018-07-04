@@ -1,3 +1,5 @@
+package app;
+
 public class RendimentoAssalariado implements IRendimentoAssalariado
 {
     //Total recebido no ano, recolhido de imposto na fonte, e o quanto foi pago de INNS

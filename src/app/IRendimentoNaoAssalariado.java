@@ -1,5 +1,6 @@
+package app;
+
 import java.util.ArrayList;
-import java.util.Set;
 
 public interface IRendimentoNaoAssalariado extends IRendimento{
     void cadastraValorRecebido(Entrada valor);

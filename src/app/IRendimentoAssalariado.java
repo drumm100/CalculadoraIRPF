@@ -1,3 +1,4 @@
+package app;
 
 public interface IRendimentoAssalariado extends IRendimento{
     public double getTotalRecolhidoNaFonte();

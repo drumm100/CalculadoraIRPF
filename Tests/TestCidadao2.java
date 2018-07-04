@@ -1,15 +1,8 @@
+import app.*;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.experimental.theories.DataPoints;
-import org.junit.experimental.theories.FromDataPoints;
-import org.junit.experimental.theories.Theories;
-import org.junit.experimental.theories.Theory;
-import org.junit.runner.RunWith;
 
 import static org.hamcrest.core.Is.is;
-import static org.hamcrest.core.IsEqual.equalTo;
-import static org.hamcrest.core.IsInstanceOf.any;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
@@ -54,7 +47,7 @@ public class TestCidadao2
         rna1.cadastraValorRecebido(nike);
         Neymar.cadastraRendimento(rna1);     //Neymar recebe bonus por gols
         Neymar.cadastraRendimento(ra1);      //Salário
-        Neymar.cadastraDespesa(d3);          //Despesa da Bruna
+        Neymar.cadastraDespesa(d3);          //app.Despesa da Bruna
 
 
         //Total Tributável - IRRF

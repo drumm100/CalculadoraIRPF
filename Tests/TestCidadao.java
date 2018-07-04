@@ -1,6 +1,5 @@
-import org.junit.Before;
+import app.*;
 import org.junit.BeforeClass;
-import org.junit.Test;
 import org.junit.experimental.theories.DataPoints;
 import org.junit.experimental.theories.FromDataPoints;
 import org.junit.experimental.theories.Theories;
@@ -8,8 +7,6 @@ import org.junit.experimental.theories.Theory;
 import org.junit.runner.RunWith;
 
 import static org.hamcrest.core.Is.is;
-import static org.hamcrest.core.IsEqual.equalTo;
-import static org.hamcrest.core.IsInstanceOf.any;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
@@ -30,8 +27,8 @@ public class TestCidadao
 
     @DataPoints public static RendimentoNaoAssalariado [] RNA = {new RendimentoNaoAssalariado(1, "Chuteira"),new RendimentoNaoAssalariado(2,"Bola")};
     @DataPoints public static RendimentoAssalariado [] RA;
-    @DataPoints("Despesa") public static Despesa [] DE = {new Despesa(0,0,(-1),3,500), new Despesa(2,0,0,9,1000)};
-    @DataPoints("Entrada") public static Entrada [] E = {new Entrada(1, 3, 200), new Entrada(2,10,5000)};
+    @DataPoints("app.Despesa") public static Despesa [] DE = {new Despesa(0,0,(-1),3,500), new Despesa(2,0,0,9,1000)};
+    @DataPoints("app.Entrada") public static Entrada [] E = {new Entrada(1, 3, 200), new Entrada(2,10,5000)};
 
 
     @BeforeClass
@@ -59,7 +56,7 @@ public class TestCidadao
 
 
     @Theory
-    public void testGetImpostoComposto(RendimentoNaoAssalariado rna, RendimentoAssalariado ra, @FromDataPoints("Despesa") Despesa de,@FromDataPoints("Entrada") Entrada e)
+    public void testGetImpostoComposto(RendimentoNaoAssalariado rna, RendimentoAssalariado ra, @FromDataPoints("app.Despesa") Despesa de,@FromDataPoints("app.Entrada") Entrada e)
     {
         rna.cadastraValorRecebido(e);
         Neymar.cadastraRendimento(rna);

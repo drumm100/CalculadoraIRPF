@@ -1,3 +1,5 @@
+package app;
+
 public class Despesa extends Entrada {
 	public static final int SAUDE = 0;
 	public static final int EDUCACAO = 1;
@@ -23,7 +25,7 @@ public class Despesa extends Entrada {
 
 	@Override
 	public String toString() {
-		return "Despesa [tipoDespesa=" + tipoDespesa + ", getId()=" + getId() + ", getMes()=" + getMes()
+		return "app.Despesa [tipoDespesa=" + tipoDespesa + ", getId()=" + getId() + ", getMes()=" + getMes()
 				+ ", getValor()=" + getValor() + "]";
 	}
 }

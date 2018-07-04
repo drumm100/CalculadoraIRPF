@@ -11,11 +11,11 @@
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <children>
-    <AnchorPane prefHeight="417.0" prefWidth="640.0" style="-fx-background-color: #E75A5A;" VBox.vgrow="ALWAYS">
+    <AnchorPane prefHeight="430.0" prefWidth="944.0" style="-fx-background-color: #E75A5A;" VBox.vgrow="ALWAYS">
          <children>
             <AnchorPane layoutX="14.0" layoutY="26.0" prefHeight="404.0" prefWidth="200.0" style="-fx-background-color: #FF8A8A;">
                <children>
-                  <Text layoutX="46.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastra Despesa">
+                  <Text layoutX="46.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastra app.Despesa">
                      <effect>
                         <Glow />
                      </effect>
@@ -29,7 +29,7 @@
                      </effect>
                   </Button>
                   <TextField layoutX="29.0" layoutY="68.0" text="ID Pessoa" />
-                  <TextField layoutX="29.0" layoutY="111.0" text="Tipo Despesa" />
+                  <TextField layoutX="29.0" layoutY="111.0" text="Tipo app.Despesa" />
                   <TextField layoutX="29.0" layoutY="155.0" text="Mês" />
                   <TextField layoutX="29.0" layoutY="202.0" text="Valor" />
                </children>
@@ -75,7 +75,11 @@
                   <TextField layoutX="29.0" layoutY="91.0" text="Nome" />
                </children>
             </AnchorPane>
-            <Button layoutX="487.0" layoutY="261.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="94.0" style="-fx-background-color: #5C5555;" text="Concluir" textFill="WHITE">
+         </children>
+    </AnchorPane>
+      <AnchorPane prefHeight="417.0" prefWidth="640.0" style="-fx-background-color: #E75A5A;">
+         <children>
+            <Button layoutX="518.0" layoutY="278.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="94.0" style="-fx-background-color: #5C5555;" text="Concluir" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
@@ -83,7 +87,13 @@
                   <Glow />
                </effect>
             </Button>
+            <AnchorPane layoutX="14.0" layoutY="46.0" prefHeight="334.0" prefWidth="446.0" style="-fx-background-color: #FF8A8A;" />
+            <Text layoutX="133.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informações">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
          </children>
-    </AnchorPane>
+      </AnchorPane>
   </children>
 </VBox>
