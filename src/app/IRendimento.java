@@ -1,8 +1,11 @@
 package app;
 
 public interface IRendimento {
-    int getId();
-    String getDescricao();
-    double getTotalRecebidoAno();
-    double getTotalTributavel();
+
+    int /*@ pure @*/ getId();
+    String /*@ pure @*/ getDescricao();
+
+    double /*@ pure @*/ getTotalRecebidoAno();
+
+    double /*@ pure @*/ getTotalTributavel();
 }

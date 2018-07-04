@@ -1,6 +1,6 @@
 package app;
 
 public interface IRendimentoAssalariado extends IRendimento{
-    public double getTotalRecolhidoNaFonte();
-    public double getTotalINSSPago();
+    double /*@ pure @*/ getTotalRecolhidoNaFonte();
+    double /*@ pure @*/ getTotalINSSPago();
 }
