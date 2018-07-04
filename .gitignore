@@ -1,4 +1,7 @@
-
+# IDE Files
 \.idea/
-
 *.iml
+
+# Compiled files
+out/
+*.class
