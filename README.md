@@ -3,7 +3,9 @@
 
 ---
 :man: **Andrius Lima**
+
 :boy: **Marcelo Drumm**
+
 :school: Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS)
 
 ---
